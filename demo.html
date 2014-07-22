@@ -1,0 +1,27 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/images/favicons/favicon.ico" type="image/x-icon">
+<title>文件上传JS校验</title>
+</head>
+<body>
+<input type="file" id="file">
+<p id="msg"></p>
+<script src="./js/matchFileEx.js"></script>
+<script>
+var _F_ = document.getElementById('file');
+var _msg_ = document.getElementById('msg');
+
+_F_.onchange = function() {
+  var _flg = matchFileEx(this.value, 'gif|jpg|jpeg|png');
+  if (!_flg) {
+    _msg_.innerHTML='<strong style="color:red;">文件格式不对</strong>';
+  } else {
+    _msg_.innerHTML='<strong style="color:green;">文件格式正确</strong>';
+  }
+};
+</script>
+</body>
+</html>

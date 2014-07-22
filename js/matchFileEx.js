@@ -1,9 +1,3 @@
-matchFileEx
-===========
-
-文件上传JS校验
-
-<pre>
 /*
 @param File 文件名
 @param Ex 后缀名 
@@ -26,4 +20,3 @@ function matchFileEx(File, Ex) {
     return false;
   }
 }
-</pre>
